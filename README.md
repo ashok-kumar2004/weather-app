@@ -19,8 +19,8 @@
 
 ## Demo
 
-![Weather App Screenshot](screenshot.png)  
-*(Replace `[screenshot](https://github.com/ashok-kumar2004/weather-app/blob/main/Screenshot%202025-09-20%20223454.png)` with your actual screenshot of the app)*
+![Weather App Screenshot](https://github.com/ashok-kumar2004/weather-app/blob/main/Screenshot%202025-09-20%20223454.png)  
+
 
 ---
 
