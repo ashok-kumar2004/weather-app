@@ -1,68 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Weather Now — Demo</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="wrap">
-<header>
-<div class="brand">
-<div class="logo"><img src="logo.svg" alt=""></div>
-<div><div style="font-weight:700"></div><div class="muted" style="font-size:12px"></div></div>
-</div>
-<div class="controls"><button id="unitToggle" aria-pressed="false">Units: °C</button></div>
-</header>
-<section class="hero">
-<div class="art" id="heroArt">
-<div id="heroSVG">☀️</div>
-<div id="loadingOverlay"><div class="spinner"></div></div>
-</div>
-<div class="info">
-<div class="city" id="cityName">—</div>
-<div class="date" id="currentDate">—</div>
-<div class="temp-wrapper">
-<div class="temp" id="tempNow">--°</div>
-<div id="condText" class="muted">—</div>
-</div>
-</div>
-</section>
-
-<div class="search-center">
-<div class="search">
-<input id="searchInput" type="search" placeholder="Search for a place...">
-<button id="searchBtn">Search</button>
-</div>
-<div id="suggestions"></div>
-</div>
-
-<div class="left">
-<div class="metrics">
-<div class="metric"><div class="label">Feels Like</div><div class="val" id="feelsLike">--°</div></div>
-<div class="metric"><div class="label">Humidity</div><div class="val" id="humidity">--%</div></div>
-<div class="metric"><div class="label">Wind</div><div class="val" id="wind">--</div></div>
-<div class="metric"><div class="label">Precipitation</div><div class="val" id="precip">--</div></div>
-</div>
-<div style="margin-top:8px">
-<div style="font-weight:700;margin-bottom:8px">Daily forecast</div>
-<div class="daily-row" id="dailyRow"></div>
-</div>
-</div>
-
-<aside class="sidebar">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-<div style="font-weight:700">Hourly forecast</div>
-<div class="muted" id="selectedDayLabel">—</div>
-</div>
-<div class="hourly-container" id="hourlyList"></div>
-</aside>
-</div>
-
-<script>
-// State
 const state={units:'metric',weather:null,place:null,selectedDate:null};
 const el=s=>document.querySelector(s);
 const hourlyVars=['temperature_2m','apparent_temperature','relativehumidity_2m','precipitation','weathercode','uv_index','visibility','windspeed_10m','pressure_msl'].join(',');
@@ -239,7 +174,3 @@ if(navigator.geolocation){
   state.place = {name:'New York'};
   fetchWeather(40.7128,-74.0060);
 }
-
-</script>
-</body>
-</html>
